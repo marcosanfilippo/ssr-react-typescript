@@ -1,12 +1,11 @@
 {
-  "name": "advanced-react",
+  "name": "ssr-react-typescript",
   "version": "1.0.0",
-  "main": "./lib/server.ts",
-  "author": "Shovon Hasan <im.shovonhasan@gmail.com>",
+  "main": "./dist/main.js",
+  "author": "Marco Sanfilippo Frittola <ingmsanfilippo@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "pm2 start ./lib/server.ts --interpreter ts-node --watch",
-    "webpack": "webpack -wd",
+    "start": "node ./dist/main.js",
     "test": "jest --watch",
     "prettier:base": "yarn run prettier --parser typescript --single-quote --trailing-comma es5",
     "prettier:write": "yarn run prettier:base --write \"./**/*.ts\"",
@@ -50,7 +49,7 @@
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
     "ts-node": "^3.3.0",
-    "webpack": "^3.5.5"
+    "webpack": "^3.12.0"
   },
   "jest": {
     "moduleFileExtensions": [

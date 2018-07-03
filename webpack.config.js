@@ -6,10 +6,10 @@ const path = require("path");
 module.exports = {
   entry: {
     vendor: ["react", "react-dom", "axios", "lodash"],
-    app: "./src/index.tsx"
+    app: "./src/server/main.ts"
   },
   output: {
-    filename: "./dist/bundle.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist")
   },
 
@@ -23,17 +23,18 @@ module.exports = {
 
   module: {
     rules: [
-      // All files with a '.ts' or '.tsx' extension will be handled by 'awesome-typescript-loader'.
+      // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
       {
         test: /\.tsx?$/,
         exclude: /node_modules/,
-        loader: "awesome-typescript-loader"
+        loader: "ts-loader"
       }
 
       // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
       // { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' }
     ]
   },
+  target: 'node',
   plugins: [
     new webpack.optimize.CommonsChunkPlugin({
       name: "vendor"
