@@ -1,0 +1,15 @@
+{
+  "apps": [
+    {
+      "name": "ssr-react-typescript",
+      "script": "./lib/server.ts",
+      "watch": true,
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ]
+}
