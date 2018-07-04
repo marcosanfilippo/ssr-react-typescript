@@ -24,3 +24,7 @@ development_notes.md
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# build output
+build/
+dist/

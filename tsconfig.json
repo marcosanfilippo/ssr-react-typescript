@@ -1,22 +1,26 @@
 {
   "compilerOptions": {
     "rootDir": ".",
-    "outDir": "build",
+    "outDir": "./build/",
     "module": "commonjs",
-    "target": "es5",
-    "lib": [ "es2017", "dom" ],
+    "target": "es6",
     "sourceMap": true,
+    "strict": true,
     "allowJs": true,
     "jsx": "react",
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
     "noImplicitReturns": true,
     "noImplicitThis": true,
     "noImplicitAny": true,
+    "noEmitOnError": true,
     "strictNullChecks": true,
     "suppressImplicitAnyIndexErrors": false,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "removeComments": true
   },
+  "include": ["./src/**/*", "./test/**/*"],
   "exclude": [
     "node_modules",
     "build",
@@ -24,7 +28,7 @@
     "acceptance-tests",
     "webpack",
     "jest",
-    "src/setupTests.ts"
+    "dist"
   ],
-  "types": [ "typePatches" ]
+  "types": ["typePatches"]
 }
