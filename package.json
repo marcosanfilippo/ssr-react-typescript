@@ -26,10 +26,12 @@
     "clean:build:dev": "del 'build/dev/'",
     "clean:build:prod": "del 'build/prod/'",
     "clean:lock": "del 'package-lock.json'",
-    "clean:modules": "npm run clean:lock && del 'node_modules/'"
+    "clean:modules": "npm run clean:lock && del 'node_modules/'",
+    "watch": "npm run prepare:dev && npx nodemon ./build/dev/app.js --watch ./src/ -e ts,tsx"
   },
   "devDependencies": {
     "del-cli": "^1.1.0",
+    "nodemon": "^1.18.2",
     "prettier": "1.13.7",
     "source-map-loader": "^0.2.3",
     "tslint": "^5.10.0",
