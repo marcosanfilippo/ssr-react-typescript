@@ -6,7 +6,7 @@ const nodeExternals = require('webpack-node-externals');
 module.exports = {
   entry: {
     vendor: ['react', 'react-dom', 'axios', 'express'],
-    app: './src/server/main.tsx'
+    app: './src/server/index.tsx'
   },
   output: {
     filename: '[name].js',
