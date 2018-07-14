@@ -16,7 +16,8 @@
     "prepare": "npm run clean:build:prod && npm run lint && npm run compile",
     "start:dev": "node ./build/dev/app.js",
     "start": "node ./build/prod/app.js",
-    "test": "jest --watch",
+    "test": "jest --coverage true",
+    "test:watch": "jest --watch --coverage false",
     "prettier:write": "prettier --parser typescript --single-quote --trailing-comma es5 --write \"./**/*.ts\"",
     "format": "npm run prettier:write",
     "precommit": "npm run format",
@@ -30,10 +31,19 @@
     "watch": "npm run prepare:dev && npx nodemon ./build/dev/app.js --watch ./src/ -e ts,tsx"
   },
   "devDependencies": {
+    "@types/jest": "^23.1.6",
+    "@types/superagent": "^3.8.2",
+    "@types/supertest": "^2.0.5",
+    "axios-mock-adapter": "^1.15.0",
     "del-cli": "^1.1.0",
+    "jest": "^23.4.1",
+    "node-mocks-http": "^1.7.0",
     "nodemon": "^1.18.2",
     "prettier": "1.13.7",
     "source-map-loader": "^0.2.3",
+    "superagent": "^3.8.3",
+    "supertest": "^3.1.0",
+    "ts-jest": "^23.0.0",
     "tslint": "^5.10.0",
     "tslint-react": "^3.6.0",
     "typescript": "^2.9.2",
@@ -52,14 +62,17 @@
     "ts-loader": "^4.4.2"
   },
   "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
-      "js"
-    ],
-    "transform": {
-      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testRegex": "/__tests__/.*\\.(ts|tsx|js)$"
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
   }
 }
