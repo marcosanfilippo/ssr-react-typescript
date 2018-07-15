@@ -7,24 +7,28 @@ const mock = new MockAdapter(axios);
 
 describe('Backend: welcome', () => {
   afterEach(() => {
-    // mock.restore();
+    mock.restore();
   });
 
   test('it resolves with data when service is available', () => {
-    const data = { fake: 'data' };
+    expect.assertions(1);
 
+    const data = { fake: 'data' };
     mock.onGet('https://randomuser.me/api/').reply(200, data);
-    getData().then(responseData => {
-      expect(responseData).toEqual(data);
+
+    return getData().then(responseData => {
+      expect(responseData).toMatchObject(data);
     });
   });
 
-  test('it reject with an error when service is not available', () => {
-    const data = {};
+  test('it catch error and return default data when service is not available', () => {
+    expect.assertions(1);
 
+    const data = {};
     mock.onGet('https://randomuser.me/api/').timeout();
-    getData().then(defaultData => {
-      expect(defaultData).toEqual(data);
+
+    return getData().then(defaultData => {
+      expect(defaultData).toMatchObject(data);
     });
   });
 });

@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App component renders correctly with a title 1`] = `
+<div>
+  <h1>
+    Welcome to SSR for React with Typescript!
+  </h1>
+  <p>
+    This is: 
+    dummy title
+  </p>
+</div>
+`;
