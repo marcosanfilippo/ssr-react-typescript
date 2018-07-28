@@ -51,5 +51,5 @@ module.exports = {
     ]
   },
   target: 'node',
-  externals: [new nodeExternals()]
+  externals: [nodeExternals()]
 };

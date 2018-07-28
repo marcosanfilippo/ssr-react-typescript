@@ -1,13 +1,89 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`App component renders correctly with a title 1`] = `
-<div>
-  <h1>
-    Welcome to SSR for React with Typescript!
-  </h1>
-  <p>
-    This is: 
-    dummy title
-  </p>
+<div
+  className="App-background-1"
+>
+  <div
+    className="MuiPaper-root-5 MuiPaper-elevation1-8 MuiPaper-rounded-6 MuiCard-root-4 App-card-2"
+  >
+    <div
+      className="MuiCardMedia-root-32 App-media-3"
+      style={
+        Object {
+          "backgroundImage": "url(\\"https://picsum.photos/300/200/?random\\")",
+        }
+      }
+      title="Contemplative Reptile"
+    />
+    <div
+      className="MuiCardContent-root-34"
+    >
+      <h2
+        className="MuiTypography-root-35 MuiTypography-headline-40 MuiTypography-gutterBottom-52"
+      >
+        Lizard
+      </h2>
+      <p
+        className="MuiTypography-root-35 MuiTypography-body1-44"
+      >
+        Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica
+      </p>
+    </div>
+    <div
+      className="MuiCardActions-root-59"
+    >
+      <button
+        className="MuiButtonBase-root-85 MuiButton-root-61 MuiButton-text-63 MuiButton-textPrimary-64 MuiButton-flat-66 MuiButton-flatPrimary-67 MuiButton-sizeSmall-82 MuiCardActions-action-60"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiButton-label-62"
+        >
+          Share
+        </span>
+        <span
+          className="MuiTouchRipple-root-88"
+        />
+      </button>
+      <button
+        className="MuiButtonBase-root-85 MuiButton-root-61 MuiButton-text-63 MuiButton-textPrimary-64 MuiButton-flat-66 MuiButton-flatPrimary-67 MuiButton-sizeSmall-82 MuiCardActions-action-60"
+        disabled={false}
+        onBlur={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex="0"
+        type="button"
+      >
+        <span
+          className="MuiButton-label-62"
+        >
+          Learn More
+        </span>
+        <span
+          className="MuiTouchRipple-root-88"
+        />
+      </button>
+    </div>
+  </div>
 </div>
 `;
